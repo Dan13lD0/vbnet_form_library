@@ -70,11 +70,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -92,13 +92,130 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="View\Author\FrmCreateUpdateAuthor.Designer.vb">
+      <DependentUpon>FrmCreateUpdateAuthor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Author\FrmCreateUpdateAuthor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Author\FrmListAuthors.Designer.vb">
+      <DependentUpon>FrmListAuthors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Author\FrmListAuthors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Book\FrmCreateUpdateBook.Designer.vb">
+      <DependentUpon>FrmCreateUpdateBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Book\FrmCreateUpdateBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Book\FrmListBooks.Designer.vb">
+      <DependentUpon>FrmListBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Book\FrmListBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Category\FrmCreateUpdateCategory.Designer.vb">
+      <DependentUpon>FrmCreateUpdateCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Category\FrmCreateUpdateCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Category\FrmListCategories.Designer.vb">
+      <DependentUpon>FrmListCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Category\FrmListCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Client\FrmCreateUpdateClient.Designer.vb">
+      <DependentUpon>FrmCreateUpdateClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client\FrmCreateUpdateClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Client\FrmListClients.Designer.vb">
+      <DependentUpon>FrmListClients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client\FrmListClients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Publisher\FrmCreateUpdatePublisher.Designer.vb">
+      <DependentUpon>FrmCreateUpdatePublisher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Publisher\FrmCreateUpdatePublisher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Publisher\FrmListPublishers.Designer.vb">
+      <DependentUpon>FrmListPublishers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Publisher\FrmListPublishers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\User\FrmCreateUpdateUser.Designer.vb">
+      <DependentUpon>FrmCreateUpdateUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\FrmCreateUpdateUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\User\FrmListUsers.Designer.vb">
+      <DependentUpon>FrmListUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\FrmListUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Author\FrmCreateUpdateAuthor.resx">
+      <DependentUpon>FrmCreateUpdateAuthor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Author\FrmListAuthors.resx">
+      <DependentUpon>FrmListAuthors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Book\FrmCreateUpdateBook.resx">
+      <DependentUpon>FrmCreateUpdateBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Book\FrmListBooks.resx">
+      <DependentUpon>FrmListBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Category\FrmCreateUpdateCategory.resx">
+      <DependentUpon>FrmCreateUpdateCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Category\FrmListCategories.resx">
+      <DependentUpon>FrmListCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Client\FrmListClients.resx">
+      <DependentUpon>FrmListClients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Publisher\FrmCreateUpdatePublisher.resx">
+      <DependentUpon>FrmCreateUpdatePublisher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Publisher\FrmListPublishers.resx">
+      <DependentUpon>FrmListPublishers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User\FrmCreateUpdateUser.resx">
+      <DependentUpon>FrmCreateUpdateUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User\FrmListUsers.resx">
+      <DependentUpon>FrmListUsers.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +229,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bll\" />
+    <Folder Include="Dal\" />
+    <Folder Include="Dto\" />
+    <Folder Include="View\BorrowBook\" />
+    <Folder Include="View\ReceiveBook\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

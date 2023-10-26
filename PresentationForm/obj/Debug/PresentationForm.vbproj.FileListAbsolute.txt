@@ -1,1 +1,16 @@
 C:\Users\padmin\Desktop\Portifolio Git\VBNETFormLibrary\PresentationForm\bin\Debug\PresentationForm.exe.config
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\bin\Debug\PresentationForm.exe.config
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\bin\Debug\PresentationForm.exe
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\bin\Debug\PresentationForm.pdb
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\bin\Debug\PresentationForm.xml
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.vbproj.AssemblyReference.cache
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.Resources.resources
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.vbproj.GenerateResource.cache
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.vbproj.CoreCompileInputs.cache
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.exe
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.xml
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.pdb
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.FrmMain.resources
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.FrmListAuthors.resources
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.FrmListBooks.resources
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.FrmListCategories.resources
