@@ -30,7 +30,6 @@ Partial Class FrmListBorrow
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.btnReport = New System.Windows.Forms.Button()
-        Me.btnChangeStatus = New System.Windows.Forms.Button()
         Me.cboAuthor = New System.Windows.Forms.ComboBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -42,7 +41,6 @@ Partial Class FrmListBorrow
         Me.cboPublisher = New System.Windows.Forms.ComboBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtCode = New System.Windows.Forms.TextBox()
-        Me.btnAdd = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
@@ -89,7 +87,7 @@ Partial Class FrmListBorrow
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(772, 16)
+        Me.Label3.Location = New System.Drawing.Point(904, 16)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(40, 13)
         Me.Label3.TabIndex = 5
@@ -110,7 +108,7 @@ Partial Class FrmListBorrow
         Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Items.AddRange(New Object() {"--- All ---", "--- Enable ---", "--- Disable ---"})
-        Me.cboStatus.Location = New System.Drawing.Point(775, 38)
+        Me.cboStatus.Location = New System.Drawing.Point(907, 38)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 2
@@ -128,25 +126,12 @@ Partial Class FrmListBorrow
         Me.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnReport.UseVisualStyleBackColor = True
         '
-        'btnChangeStatus
-        '
-        Me.btnChangeStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnChangeStatus.ImageKey = "change.png"
-        Me.btnChangeStatus.ImageList = Me.IconsListForm
-        Me.btnChangeStatus.Location = New System.Drawing.Point(1050, 14)
-        Me.btnChangeStatus.Name = "btnChangeStatus"
-        Me.btnChangeStatus.Size = New System.Drawing.Size(60, 60)
-        Me.btnChangeStatus.TabIndex = 17
-        Me.btnChangeStatus.Text = "Enable"
-        Me.btnChangeStatus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnChangeStatus.UseVisualStyleBackColor = True
-        '
         'cboAuthor
         '
         Me.cboAuthor.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboAuthor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboAuthor.FormattingEnabled = True
-        Me.cboAuthor.Location = New System.Drawing.Point(480, 38)
+        Me.cboAuthor.Location = New System.Drawing.Point(612, 38)
         Me.cboAuthor.Name = "cboAuthor"
         Me.cboAuthor.Size = New System.Drawing.Size(162, 21)
         Me.cboAuthor.TabIndex = 2
@@ -156,7 +141,7 @@ Partial Class FrmListBorrow
         Me.btnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSearch.ImageKey = "search.png"
         Me.btnSearch.ImageList = Me.IconsListForm
-        Me.btnSearch.Location = New System.Drawing.Point(984, 14)
+        Me.btnSearch.Location = New System.Drawing.Point(1050, 14)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(60, 60)
         Me.btnSearch.TabIndex = 16
@@ -180,9 +165,9 @@ Partial Class FrmListBorrow
         Me.GroupBox1.Controls.Add(Me.cboStatus)
         Me.GroupBox1.Controls.Add(Me.txtName)
         Me.GroupBox1.Controls.Add(Me.txtCode)
-        Me.GroupBox1.Location = New System.Drawing.Point(78, 10)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(900, 65)
+        Me.GroupBox1.Size = New System.Drawing.Size(1032, 65)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filters:"
@@ -191,7 +176,7 @@ Partial Class FrmListBorrow
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(350, 15)
+        Me.Label6.Location = New System.Drawing.Point(482, 15)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 5
@@ -201,7 +186,7 @@ Partial Class FrmListBorrow
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(477, 16)
+        Me.Label5.Location = New System.Drawing.Point(609, 16)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 13)
         Me.Label5.TabIndex = 5
@@ -211,7 +196,7 @@ Partial Class FrmListBorrow
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(645, 16)
+        Me.Label4.Location = New System.Drawing.Point(777, 16)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 5
@@ -231,7 +216,7 @@ Partial Class FrmListBorrow
         Me.cboCategory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategory.FormattingEnabled = True
-        Me.cboCategory.Location = New System.Drawing.Point(353, 37)
+        Me.cboCategory.Location = New System.Drawing.Point(485, 37)
         Me.cboCategory.Name = "cboCategory"
         Me.cboCategory.Size = New System.Drawing.Size(121, 21)
         Me.cboCategory.TabIndex = 2
@@ -241,7 +226,7 @@ Partial Class FrmListBorrow
         Me.cboPublisher.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboPublisher.FormattingEnabled = True
-        Me.cboPublisher.Location = New System.Drawing.Point(648, 38)
+        Me.cboPublisher.Location = New System.Drawing.Point(780, 38)
         Me.cboPublisher.Name = "cboPublisher"
         Me.cboPublisher.Size = New System.Drawing.Size(121, 21)
         Me.cboPublisher.TabIndex = 2
@@ -252,7 +237,7 @@ Partial Class FrmListBorrow
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtName.Location = New System.Drawing.Point(96, 38)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(251, 20)
+        Me.txtName.Size = New System.Drawing.Size(383, 20)
         Me.txtName.TabIndex = 1
         '
         'txtCode
@@ -261,18 +246,6 @@ Partial Class FrmListBorrow
         Me.txtCode.Name = "txtCode"
         Me.txtCode.Size = New System.Drawing.Size(84, 20)
         Me.txtCode.TabIndex = 0
-        '
-        'btnAdd
-        '
-        Me.btnAdd.ImageKey = "Add.png"
-        Me.btnAdd.ImageList = Me.IconsListForm
-        Me.btnAdd.Location = New System.Drawing.Point(12, 14)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(60, 60)
-        Me.btnAdd.TabIndex = 15
-        Me.btnAdd.Text = "New"
-        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -392,10 +365,8 @@ Partial Class FrmListBorrow
         Me.ControlBox = False
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnReport)
-        Me.Controls.Add(Me.btnChangeStatus)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmListBorrow"
@@ -419,7 +390,6 @@ Partial Class FrmListBorrow
     Friend WithEvents Label1 As Label
     Friend WithEvents cboStatus As ComboBox
     Friend WithEvents btnReport As Button
-    Friend WithEvents btnChangeStatus As Button
     Friend WithEvents cboAuthor As ComboBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -431,7 +401,6 @@ Partial Class FrmListBorrow
     Friend WithEvents cboPublisher As ComboBox
     Friend WithEvents txtName As TextBox
     Friend WithEvents txtCode As TextBox
-    Friend WithEvents btnAdd As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BindingNavigator1 As BindingNavigator

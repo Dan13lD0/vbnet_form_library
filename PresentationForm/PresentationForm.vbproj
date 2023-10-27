@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,7 +49,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -70,6 +81,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\CategoryBll.vb" />
+    <Compile Include="Dal\CategoryDal.vb" />
+    <Compile Include="Dal\Dao\ContextSqlServer.vb" />
+    <Compile Include="Dto\AddressDto.vb" />
+    <Compile Include="Dto\AuthorDto.vb" />
+    <Compile Include="Dto\BookDto.vb" />
+    <Compile Include="Dto\BorrowDto.vb" />
+    <Compile Include="Dto\CategoryDto.vb" />
+    <Compile Include="Dto\ClientDto.vb" />
+    <Compile Include="Dto\ContactDto.vb" />
+    <Compile Include="Dto\PublisherDto.vb" />
+    <Compile Include="Dto\UserDto.vb" />
     <Compile Include="FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +139,18 @@
     <Compile Include="View\Book\FrmListBooks.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\BorrowBook\FrmBorrow.Designer.vb">
+      <DependentUpon>FrmBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\BorrowBook\FrmBorrow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BorrowBook\FrmListBorrow.Designer.vb">
+      <DependentUpon>FrmListBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\BorrowBook\FrmListBorrow.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Category\FrmCreateUpdateCategory.Designer.vb">
       <DependentUpon>FrmCreateUpdateCategory.vb</DependentUpon>
     </Compile>
@@ -158,6 +193,12 @@
     <Compile Include="View\Publisher\FrmListPublishers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\ReceiveBook\FrmReceiveBookList.Designer.vb">
+      <DependentUpon>FrmReceiveBookList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReceiveBook\FrmReceiveBookList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\User\FrmCreateUpdateUser.Designer.vb">
       <DependentUpon>FrmCreateUpdateUser.vb</DependentUpon>
     </Compile>
@@ -193,11 +234,20 @@
     <EmbeddedResource Include="View\Book\FrmListBooks.resx">
       <DependentUpon>FrmListBooks.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BorrowBook\FrmBorrow.resx">
+      <DependentUpon>FrmBorrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BorrowBook\FrmListBorrow.resx">
+      <DependentUpon>FrmListBorrow.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Category\FrmCreateUpdateCategory.resx">
       <DependentUpon>FrmCreateUpdateCategory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Category\FrmListCategories.resx">
       <DependentUpon>FrmListCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Client\FrmCreateUpdateClient.resx">
+      <DependentUpon>FrmCreateUpdateClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Client\FrmListClients.resx">
       <DependentUpon>FrmListClients.vb</DependentUpon>
@@ -210,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Publisher\FrmListPublishers.resx">
       <DependentUpon>FrmListPublishers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReceiveBook\FrmReceiveBookList.resx">
+      <DependentUpon>FrmReceiveBookList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\User\FrmCreateUpdateUser.resx">
       <DependentUpon>FrmCreateUpdateUser.vb</DependentUpon>
@@ -229,15 +282,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bll\" />
-    <Folder Include="Dal\" />
-    <Folder Include="Dto\" />
-    <Folder Include="View\BorrowBook\" />
-    <Folder Include="View\ReceiveBook\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

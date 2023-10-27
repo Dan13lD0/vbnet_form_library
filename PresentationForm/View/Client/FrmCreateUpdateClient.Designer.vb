@@ -29,38 +29,38 @@ Partial Class FrmCreateUpdateClient
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ImageListCreateUpdate = New System.Windows.Forms.ImageList(Me.components)
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnClean = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -117,12 +117,80 @@ Partial Class FrmCreateUpdateClient
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         '
+        'MaskedTextBox2
+        '
+        Me.MaskedTextBox2.Location = New System.Drawing.Point(375, 85)
+        Me.MaskedTextBox2.Mask = "000.000.000-00"
+        Me.MaskedTextBox2.Name = "MaskedTextBox2"
+        Me.MaskedTextBox2.Size = New System.Drawing.Size(173, 20)
+        Me.MaskedTextBox2.TabIndex = 9
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(220, 85)
+        Me.MaskedTextBox1.Mask = "00.000.000-0"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(149, 20)
+        Me.MaskedTextBox1.TabIndex = 8
+        Me.MaskedTextBox1.ValidatingType = GetType(Integer)
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 82)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(143, 20)
+        Me.DateTimePicker1.TabIndex = 4
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(155, 82)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(59, 20)
+        Me.TextBox1.TabIndex = 3
+        '
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(6, 33)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(542, 20)
         Me.txtName.TabIndex = 2
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(372, 66)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(30, 13)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "CPF:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(217, 66)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 13)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "RG:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(152, 66)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(29, 13)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "Age:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 66)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(48, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Birthday:"
         '
         'Label3
         '
@@ -143,7 +211,7 @@ Partial Class FrmCreateUpdateClient
         '
         'btnClose
         '
-        Me.btnClose.ImageIndex = 1
+        Me.btnClose.ImageKey = "back.png"
         Me.btnClose.ImageList = Me.ImageListCreateUpdate
         Me.btnClose.Location = New System.Drawing.Point(506, 434)
         Me.btnClose.Name = "btnClose"
@@ -177,74 +245,6 @@ Partial Class FrmCreateUpdateClient
         Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 66)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Birthday:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(152, 66)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(29, 13)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "Age:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(217, 66)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 13)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "RG:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(372, 66)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(30, 13)
-        Me.Label7.TabIndex = 1
-        Me.Label7.Text = "CPF:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(155, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(59, 20)
-        Me.TextBox1.TabIndex = 3
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 82)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(143, 20)
-        Me.DateTimePicker1.TabIndex = 4
-        '
-        'MaskedTextBox2
-        '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(375, 85)
-        Me.MaskedTextBox2.Mask = "000.000.000-00"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(173, 20)
-        Me.MaskedTextBox2.TabIndex = 9
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(220, 85)
-        Me.MaskedTextBox1.Mask = "00.000.000-0"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.MaskedTextBox1.TabIndex = 8
-        Me.MaskedTextBox1.ValidatingType = GetType(Integer)
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TextBox6)
@@ -264,69 +264,12 @@ Partial Class FrmCreateUpdateClient
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Address:"
         '
-        'Label8
+        'TextBox6
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 26)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(50, 13)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "ZipCode:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(9, 42)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox2.TabIndex = 3
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 72)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(38, 13)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Street:"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(6, 88)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(542, 20)
-        Me.TextBox3.TabIndex = 3
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(3, 118)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(68, 13)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Complement:"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(6, 134)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(261, 20)
-        Me.TextBox4.TabIndex = 3
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(274, 118)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(27, 13)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "City:"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(277, 134)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox5.TabIndex = 3
+        Me.TextBox6.Location = New System.Drawing.Point(436, 134)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(112, 20)
+        Me.TextBox6.TabIndex = 3
         '
         'Label12
         '
@@ -337,12 +280,69 @@ Partial Class FrmCreateUpdateClient
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "State:"
         '
-        'TextBox6
+        'TextBox5
         '
-        Me.TextBox6.Location = New System.Drawing.Point(436, 134)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox6.TabIndex = 3
+        Me.TextBox5.Location = New System.Drawing.Point(277, 134)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(153, 20)
+        Me.TextBox5.TabIndex = 3
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(274, 118)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(27, 13)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "City:"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(6, 134)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(261, 20)
+        Me.TextBox4.TabIndex = 3
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(3, 118)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(68, 13)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Complement:"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(6, 88)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(542, 20)
+        Me.TextBox3.TabIndex = 3
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(3, 72)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(38, 13)
+        Me.Label9.TabIndex = 1
+        Me.Label9.Text = "Street:"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(9, 42)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox2.TabIndex = 3
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 26)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(50, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "ZipCode:"
         '
         'GroupBox3
         '
@@ -359,6 +359,38 @@ Partial Class FrmCreateUpdateClient
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contact:"
         '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(118, 42)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(215, 20)
+        Me.TextBox7.TabIndex = 3
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(115, 26)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(47, 13)
+        Me.Label13.TabIndex = 1
+        Me.Label13.Text = "Contact:"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(339, 42)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(209, 20)
+        Me.TextBox8.TabIndex = 3
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(336, 26)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(25, 13)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "For:"
+        '
         'TextBox11
         '
         Me.TextBox11.Location = New System.Drawing.Point(9, 42)
@@ -374,38 +406,6 @@ Partial Class FrmCreateUpdateClient
         Me.Label17.Size = New System.Drawing.Size(34, 13)
         Me.Label17.TabIndex = 1
         Me.Label17.Text = "Type:"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(115, 26)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(47, 13)
-        Me.Label13.TabIndex = 1
-        Me.Label13.Text = "Contact:"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(118, 42)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(215, 20)
-        Me.TextBox7.TabIndex = 3
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(336, 26)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(25, 13)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "For:"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(339, 42)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(209, 20)
-        Me.TextBox8.TabIndex = 3
         '
         'FrmCreateUpdateClient
         '

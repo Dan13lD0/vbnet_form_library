@@ -4,6 +4,11 @@
         Me.Left = 0
         Me.Width = Screen.PrimaryScreen.Bounds.Width
         Me.Height = Screen.PrimaryScreen.Bounds.Height - 45
+
+        Dim bll As New CategoryBll()
+
+        bll.GetCategories()
+
     End Sub
 
     Private Sub ListbooksToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListbooksToolStripMenuItem.Click
