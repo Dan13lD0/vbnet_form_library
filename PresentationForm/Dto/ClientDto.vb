@@ -8,7 +8,6 @@ Public Class ClientDto
 
     Private _id As Int64
     Private _name As String
-
     Private _birthDay As DateTime
     Private _age As Int16
     Private _rg As String

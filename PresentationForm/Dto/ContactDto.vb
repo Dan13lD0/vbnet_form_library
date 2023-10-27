@@ -10,8 +10,7 @@ Public Class ContactDto
     Private _type As String
     Private _contact As String
     Private _person As String
-    Private _status As Boolean
-    Private _statusDescription As String
+
 
 
     <Key>
@@ -50,22 +49,5 @@ Public Class ContactDto
             _person = value
         End Set
     End Property
-    Public Property Status() As Boolean
-        Get
-            Return _status
-        End Get
-        Set(ByVal value As Boolean)
-            _status = value
-        End Set
-    End Property
-    <NotMapped>
-    Public ReadOnly Property StatusDescription() As String
-        Get
-            If _statusDescription Then
-                Return "Active"
-            Else
-                Return "Inactive"
-            End If
-        End Get
-    End Property
+
 End Class

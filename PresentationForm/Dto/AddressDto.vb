@@ -12,8 +12,6 @@ Public Class AddressDto
     Private _complement As String
     Private _city As String
     Private _state As String
-    Private _status As Boolean
-    Private _statusDescription As String
 
 
     <Key>
@@ -69,22 +67,5 @@ Public Class AddressDto
             _state = value
         End Set
     End Property
-    Public Property Status() As Boolean
-        Get
-            Return _status
-        End Get
-        Set(ByVal value As Boolean)
-            _status = value
-        End Set
-    End Property
-    <NotMapped>
-    Public ReadOnly Property StatusDescription() As String
-        Get
-            If _statusDescription Then
-                Return "Active"
-            Else
-                Return "Inactive"
-            End If
-        End Get
-    End Property
+
 End Class

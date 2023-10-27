@@ -5,7 +5,7 @@ Public Class ContextSqlServer
     Inherits DbContext
 
     Public Sub New()
-        MyBase.New(ConfigurationManager.ConnectionStrings("ConnectionString").ToString())
+        MyBase.New(My.Settings.ConnectionString)
     End Sub
 
     Private _user As DbSet(Of UserDto)

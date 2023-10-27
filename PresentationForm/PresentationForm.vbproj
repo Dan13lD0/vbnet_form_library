@@ -82,8 +82,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bll\CategoryBll.vb" />
+    <Compile Include="Dal\AddressDal.vb" />
+    <Compile Include="Dal\AuthorDal.vb" />
+    <Compile Include="Dal\BookDal.vb" />
+    <Compile Include="Dal\BorrowDal.vb" />
     <Compile Include="Dal\CategoryDal.vb" />
+    <Compile Include="Dal\ClientDal.vb" />
+    <Compile Include="Dal\ContactDal.vb" />
     <Compile Include="Dal\Dao\ContextSqlServer.vb" />
+    <Compile Include="Dal\PublisherDal.vb" />
+    <Compile Include="Dal\UserDal.vb" />
     <Compile Include="Dto\AddressDto.vb" />
     <Compile Include="Dto\AuthorDto.vb" />
     <Compile Include="Dto\BookDto.vb" />
