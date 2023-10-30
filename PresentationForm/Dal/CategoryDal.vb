@@ -2,12 +2,12 @@
 
 Public Class CategoryDal
 
-    Public Function GetCategories(code As Int64?, name As String, status As Boolean) As List(Of CategoryDto)
+    Public Function GetCategories(code As Int64, name As String, status As Boolean?) As List(Of CategoryDto)
         Using conn As New ContextSqlServer()
-            If status = Nothing Then
-                Return conn.Category.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name)).ToList()
+            If status.Equals(Nothing) Then
+                Return conn.Category.Where(Function(i) i.Id = If(code > 0, code, i.Id) And i.Name.Contains(name)).ToList()
             Else
-                Return conn.Category.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name) & i.Status = status).ToList()
+                Return conn.Category.Where(Function(i) i.Id = If(code > 0, code, i.Id) And i.Name.Contains(name) And i.Status = status).ToList()
             End If
         End Using
     End Function
@@ -19,7 +19,7 @@ Public Class CategoryDal
     End Function
 
     Public Function CreateCategory(obj As CategoryDto) As CategoryDto
-        Dim insert As CategoryDto
+        Dim insert As New CategoryDto
 
         insert.Name = obj.Name
         insert.Status = True
@@ -48,7 +48,7 @@ Public Class CategoryDal
         Using conn As New ContextSqlServer()
             Dim update = conn.Category.FirstOrDefault(Function(i) i.Id = obj.Id)
             If update IsNot Nothing Then
-                update.Status = If(obj.Status, False, True)
+                update.Status = If(update.Status, False, True)
                 conn.SaveChanges()
                 Return update
             End If

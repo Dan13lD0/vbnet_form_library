@@ -81,7 +81,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\AddressBll.vb" />
+    <Compile Include="Bll\AuthorBll.vb" />
+    <Compile Include="Bll\BookBll.vb" />
+    <Compile Include="Bll\BorrowBll.vb" />
     <Compile Include="Bll\CategoryBll.vb" />
+    <Compile Include="Bll\ClientBll.vb" />
+    <Compile Include="Bll\ContactBll.vb" />
+    <Compile Include="Bll\PublisherBll.vb" />
+    <Compile Include="Bll\UserBll.vb" />
     <Compile Include="Dal\AddressDal.vb" />
     <Compile Include="Dal\AuthorDal.vb" />
     <Compile Include="Dal\BookDal.vb" />
@@ -123,6 +131,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utils\Utils.vb" />
     <Compile Include="View\Author\FrmCreateUpdateAuthor.Designer.vb">
       <DependentUpon>FrmCreateUpdateAuthor.vb</DependentUpon>
     </Compile>

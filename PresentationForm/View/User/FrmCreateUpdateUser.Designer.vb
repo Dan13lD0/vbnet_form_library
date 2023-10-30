@@ -27,7 +27,6 @@ Partial Class FrmCreateUpdateUser
         Me.btnSave = New System.Windows.Forms.Button()
         Me.ImageListCreateUpdate = New System.Windows.Forms.ImageList(Me.components)
         Me.cboStatus = New System.Windows.Forms.ComboBox()
-        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
@@ -35,12 +34,13 @@ Partial Class FrmCreateUpdateUser
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnClean = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtLogin = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtLogin = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,18 +66,12 @@ Partial Class FrmCreateUpdateUser
         '
         'cboStatus
         '
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Location = New System.Drawing.Point(270, 21)
         Me.cboStatus.Name = "cboStatus"
         Me.cboStatus.Size = New System.Drawing.Size(121, 21)
         Me.cboStatus.TabIndex = 11
-        '
-        'txtCode
-        '
-        Me.txtCode.Location = New System.Drawing.Point(12, 21)
-        Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(100, 20)
-        Me.txtCode.TabIndex = 10
         '
         'Label2
         '
@@ -99,6 +93,7 @@ Partial Class FrmCreateUpdateUser
         '
         'txtName
         '
+        Me.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtName.Location = New System.Drawing.Point(6, 33)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(367, 20)
@@ -153,21 +148,12 @@ Partial Class FrmCreateUpdateUser
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         '
-        'Label4
+        'txtEmail
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 58)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(36, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Login:"
-        '
-        'txtLogin
-        '
-        Me.txtLogin.Location = New System.Drawing.Point(6, 74)
-        Me.txtLogin.Name = "txtLogin"
-        Me.txtLogin.Size = New System.Drawing.Size(199, 20)
-        Me.txtLogin.TabIndex = 2
+        Me.txtEmail.Location = New System.Drawing.Point(6, 119)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(367, 20)
+        Me.txtEmail.TabIndex = 2
         '
         'Label5
         '
@@ -178,12 +164,13 @@ Partial Class FrmCreateUpdateUser
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "E-mail:"
         '
-        'txtEmail
+        'txtPassword
         '
-        Me.txtEmail.Location = New System.Drawing.Point(6, 119)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(367, 20)
-        Me.txtEmail.TabIndex = 2
+        Me.txtPassword.Location = New System.Drawing.Point(211, 74)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(162, 20)
+        Me.txtPassword.TabIndex = 2
         '
         'Label6
         '
@@ -194,12 +181,30 @@ Partial Class FrmCreateUpdateUser
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "Password:"
         '
-        'txtPassword
+        'txtLogin
         '
-        Me.txtPassword.Location = New System.Drawing.Point(211, 74)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(162, 20)
-        Me.txtPassword.TabIndex = 2
+        Me.txtLogin.Location = New System.Drawing.Point(6, 74)
+        Me.txtLogin.Name = "txtLogin"
+        Me.txtLogin.Size = New System.Drawing.Size(199, 20)
+        Me.txtLogin.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 58)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(36, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Login:"
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(12, 21)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.ReadOnly = True
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 15
+        Me.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FrmCreateUpdateUser
         '
@@ -207,9 +212,9 @@ Partial Class FrmCreateUpdateUser
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(398, 277)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.cboStatus)
-        Me.Controls.Add(Me.txtCode)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
@@ -229,7 +234,6 @@ Partial Class FrmCreateUpdateUser
     Friend WithEvents btnSave As Button
     Friend WithEvents ImageListCreateUpdate As ImageList
     Friend WithEvents cboStatus As ComboBox
-    Friend WithEvents txtCode As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtName As TextBox
@@ -243,4 +247,5 @@ Partial Class FrmCreateUpdateUser
     Friend WithEvents Label6 As Label
     Friend WithEvents txtLogin As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents txtCode As TextBox
 End Class

@@ -1,12 +1,16 @@
 ﻿Public Class UserDal
-    Public Function GetUsers(code As Int64?, name As String, login As String, email As String, status As Boolean) As List(Of UserDto)
-        Using conn As New ContextSqlServer()
-            If status = Nothing Then
-                Return conn.User.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name) & i.Login.Contains(login) & i.Email.Contains(email)).ToList()
-            Else
-                Return conn.User.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name) & i.Login.Contains(login) & i.Email.Contains(email) & i.Status = status).ToList()
-            End If
-        End Using
+    Public Function GetUsers(code As Int64, name As String, login As String, email As String, status As Boolean?) As List(Of UserDto)
+        Try
+            Using conn As New ContextSqlServer()
+                If status.Equals(Nothing) Then
+                    Return conn.User.Where(Function(i) i.Id.Equals(If(code > 0, code, i.Id)) And i.Name.Contains(name) And i.Login.Contains(login) And i.Email.Contains(email)).ToList()
+                Else
+                    Return conn.User.Where(Function(i) i.Id.Equals(If(code > 0, code, i.Id)) And i.Name.Contains(name) And i.Login.Contains(login) And i.Email.Contains(email) And i.Status = status).ToList()
+                End If
+            End Using
+        Catch ex As Exception
+
+        End Try
     End Function
 
     Public Function GetUser(id As Int64) As UserDto
@@ -16,7 +20,7 @@
     End Function
 
     Public Function CreateUser(obj As UserDto) As UserDto
-        Dim insert As UserDto
+        Dim insert As New UserDto()
 
         insert.Name = obj.Name
         insert.Login = obj.Login
@@ -51,7 +55,7 @@
         Using conn As New ContextSqlServer()
             Dim update = conn.User.FirstOrDefault(Function(i) i.Id = obj.Id)
             If update IsNot Nothing Then
-                update.Status = If(obj.Status, False, True)
+                update.Status = If(update.Status, False, True)
                 conn.SaveChanges()
                 Return update
             End If

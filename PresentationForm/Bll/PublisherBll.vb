@@ -1,11 +1,8 @@
-﻿Public Class CategoryBll
-
-    Private _dal As New CategoryDal()
-
-    Public Function GetCategories(code As String, name As String, status As String) As List(Of CategoryDto)
+﻿Public Class PublisherBll
+    Private _dal As New PublisherDal()
+    Public Function GetPublishers(code As String, name As String, status As String) As List(Of PublisherDto)
         Dim id As Int64 = 0
         Int64.TryParse(code, id)
-
 
         Dim vStatus As Boolean?
 
@@ -19,23 +16,23 @@
             End If
         End If
 
-        Return _dal.GetCategories(id, name, vStatus)
+        Return _dal.GetPublishers(id, name, vStatus)
     End Function
 
-    Public Function GetCategory(code As String) As CategoryDto
+    Public Function GetPublisher(code As String) As PublisherDto
         Dim id As Int64 = 0
         Int64.TryParse(code, id)
 
-        Return _dal.GetCategory(id)
+        Return _dal.GetPublisher(id)
     End Function
 
-    Public Function CreateUpdateCategory(code As String, name As String, status As String, ByRef msg As String, ByRef action As Boolean) As CategoryDto
+    Public Function CreateUpdatePublisher(code As String, name As String, status As String, ByRef msg As String, ByRef action As Boolean) As PublisherDto
 
         Try
             action = True
-            msg = If(String.IsNullOrEmpty(code), "Category create with successful", "Category updated with successful")
+            msg = If(String.IsNullOrEmpty(code), "Publisher create with successful", "Publisher updated with successful")
 
-            Dim obj As New CategoryDto()
+            Dim obj As New PublisherDto()
             Int64.TryParse(code, obj.Id)
 
             obj.Name = If(String.IsNullOrEmpty(name), "", name)
@@ -48,16 +45,16 @@
                 obj.Status = Nothing
             End If
 
-            If _dal.ExistsCategory(obj) Then
+            If _dal.ExistsPublisher(obj) Then
                 action = False
                 msg = "This record already exists!"
                 Return Nothing
             End If
 
             If obj.Id = 0 Then
-                Return _dal.CreateCategory(obj)
+                Return _dal.CreatePublisher(obj)
             Else
-                Return _dal.UpdateCategory(obj)
+                Return _dal.UpdatePublisher(obj)
             End If
         Catch ex As Exception
             action = False
@@ -67,17 +64,18 @@
 
     End Function
 
-    Public Function DeleteCategory(code As String, ByRef action As String, ByRef msg As String) As CategoryDto
+    Public Function DeletePublisher(code As String, ByRef action As String, ByRef msg As String) As PublisherDto
         Try
             action = True
             msg = "Status changed with successful!"
-            Dim obj As New CategoryDto()
+            Dim obj As New PublisherDto()
             Int64.TryParse(code, obj.Id)
 
-            Return _dal.EnableDisableCategory(obj)
+            Return _dal.EnableDisablePublisher(obj)
         Catch ex As Exception
             action = True
             msg = ex.Message
         End Try
     End Function
+
 End Class

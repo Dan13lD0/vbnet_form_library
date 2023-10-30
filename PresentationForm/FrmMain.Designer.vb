@@ -24,13 +24,13 @@ Partial Class FrmMain
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ActionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListbooksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AuthorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListbooksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PublisherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BorrowBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReceiveBookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,48 +56,48 @@ Partial Class FrmMain
         Me.ActionToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.ActionToolStripMenuItem.Text = "Action"
         '
-        'UserToolStripMenuItem
-        '
-        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
-        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.UserToolStripMenuItem.Text = "User"
-        '
-        'ClientToolStripMenuItem
-        '
-        Me.ClientToolStripMenuItem.Name = "ClientToolStripMenuItem"
-        Me.ClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ClientToolStripMenuItem.Text = "Client"
-        '
         'BookToolStripMenuItem
         '
         Me.BookToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AuthorToolStripMenuItem, Me.CategoryToolStripMenuItem, Me.ListbooksToolStripMenuItem, Me.PublisherToolStripMenuItem})
         Me.BookToolStripMenuItem.Name = "BookToolStripMenuItem"
-        Me.BookToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BookToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
         Me.BookToolStripMenuItem.Text = "Book"
-        '
-        'ListbooksToolStripMenuItem
-        '
-        Me.ListbooksToolStripMenuItem.Name = "ListbooksToolStripMenuItem"
-        Me.ListbooksToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ListbooksToolStripMenuItem.Text = "Books List"
-        '
-        'CategoryToolStripMenuItem
-        '
-        Me.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem"
-        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CategoryToolStripMenuItem.Text = "Category"
         '
         'AuthorToolStripMenuItem
         '
         Me.AuthorToolStripMenuItem.Name = "AuthorToolStripMenuItem"
-        Me.AuthorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AuthorToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.AuthorToolStripMenuItem.Text = "Author"
+        '
+        'CategoryToolStripMenuItem
+        '
+        Me.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem"
+        Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.CategoryToolStripMenuItem.Text = "Category"
+        '
+        'ListbooksToolStripMenuItem
+        '
+        Me.ListbooksToolStripMenuItem.Name = "ListbooksToolStripMenuItem"
+        Me.ListbooksToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.ListbooksToolStripMenuItem.Text = "Books List"
         '
         'PublisherToolStripMenuItem
         '
         Me.PublisherToolStripMenuItem.Name = "PublisherToolStripMenuItem"
-        Me.PublisherToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PublisherToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.PublisherToolStripMenuItem.Text = "Publisher"
+        '
+        'ClientToolStripMenuItem
+        '
+        Me.ClientToolStripMenuItem.Name = "ClientToolStripMenuItem"
+        Me.ClientToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
+        Me.ClientToolStripMenuItem.Text = "Client"
+        '
+        'UserToolStripMenuItem
+        '
+        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(105, 22)
+        Me.UserToolStripMenuItem.Text = "User"
         '
         'MovimentationToolStripMenuItem
         '
@@ -109,13 +109,13 @@ Partial Class FrmMain
         'BorrowBookToolStripMenuItem
         '
         Me.BorrowBookToolStripMenuItem.Name = "BorrowBookToolStripMenuItem"
-        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BorrowBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.BorrowBookToolStripMenuItem.Text = "Borrow Book"
         '
         'ReceiveBookToolStripMenuItem
         '
         Me.ReceiveBookToolStripMenuItem.Name = "ReceiveBookToolStripMenuItem"
-        Me.ReceiveBookToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReceiveBookToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ReceiveBookToolStripMenuItem.Text = "Receive Book"
         '
         'AboutToolStripMenuItem
@@ -128,7 +128,7 @@ Partial Class FrmMain
         'InfoToolStripMenuItem
         '
         Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
-        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(95, 22)
         Me.InfoToolStripMenuItem.Text = "Info"
         '
         'LogoutToolStripMenuItem

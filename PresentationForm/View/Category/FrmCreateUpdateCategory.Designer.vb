@@ -40,6 +40,7 @@ Partial Class FrmCreateUpdateCategory
         '
         'cboStatus
         '
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Location = New System.Drawing.Point(270, 26)
         Me.cboStatus.Name = "cboStatus"
@@ -52,6 +53,7 @@ Partial Class FrmCreateUpdateCategory
         Me.txtCode.Name = "txtCode"
         Me.txtCode.Size = New System.Drawing.Size(100, 20)
         Me.txtCode.TabIndex = 10
+        Me.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '

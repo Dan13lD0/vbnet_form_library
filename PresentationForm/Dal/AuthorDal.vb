@@ -1,10 +1,10 @@
 ﻿Public Class AuthorDal
-    Public Function GetAuthors(code As Int64?, name As String, status As Boolean) As List(Of AuthorDto)
+    Public Function GetAuthors(code As Int64, name As String, status As Boolean?) As List(Of AuthorDto)
         Using conn As New ContextSqlServer()
-            If status = Nothing Then
-                Return conn.Author.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name)).ToList()
+            If status.Equals(Nothing) Then
+                Return conn.Author.Where(Function(i) i.Id.Equals(If(code > 0, code, i.Id)) And i.Name.Contains(name)).ToList()
             Else
-                Return conn.Author.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name) & i.Status = status).ToList()
+                Return conn.Author.Where(Function(i) i.Id.Equals(If(code > 0, code, i.Id)) And i.Name.Contains(name) And i.Status = status).ToList()
             End If
         End Using
     End Function
@@ -16,7 +16,7 @@
     End Function
 
     Public Function CreateAuthor(obj As AuthorDto) As AuthorDto
-        Dim insert As AuthorDto
+        Dim insert As New AuthorDto
 
         insert.Name = obj.Name
         insert.Status = True
@@ -45,7 +45,7 @@
         Using conn As New ContextSqlServer()
             Dim update = conn.Author.FirstOrDefault(Function(i) i.Id = obj.Id)
             If update IsNot Nothing Then
-                update.Status = If(obj.Status, False, True)
+                update.Status = If(update.Status, False, True)
                 conn.SaveChanges()
                 Return update
             End If
