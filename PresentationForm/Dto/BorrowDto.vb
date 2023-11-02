@@ -10,7 +10,9 @@ Public Class BorrowDto
 
     Private _bookId As Int64
     Private _book As BookDto
+    Private _bookName As String
     Private _clientId As Int64
+    Private _clientName As String
     Private _client As ClientDto
     Private _dateBorrow As DateTime
     Private _dateReturn As DateTime
@@ -63,6 +65,24 @@ Public Class BorrowDto
             _client = value
         End Set
     End Property
+    <NotMapped>
+    Public Property BookName As String
+        Get
+            Return _bookName
+        End Get
+        Set(value As String)
+            _bookName = value
+        End Set
+    End Property
+    <NotMapped>
+    Public Property ClientName As String
+        Get
+            Return _clientName
+        End Get
+        Set(value As String)
+            _clientName = value
+        End Set
+    End Property
 
     Public Property DateBorrow As Date
         Get
@@ -92,13 +112,12 @@ Public Class BorrowDto
     <NotMapped>
     Public ReadOnly Property StatusDescription() As String
         Get
-            If _statusDescription Then
+            If _status Then
                 Return "Active"
             Else
                 Return "Inactive"
             End If
         End Get
     End Property
-
 
 End Class

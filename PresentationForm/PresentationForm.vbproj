@@ -98,6 +98,7 @@
     <Compile Include="Dal\ClientDal.vb" />
     <Compile Include="Dal\ContactDal.vb" />
     <Compile Include="Dal\Dao\ContextSqlServer.vb" />
+    <Compile Include="Dal\LoginDal.vb" />
     <Compile Include="Dal\PublisherDal.vb" />
     <Compile Include="Dal\UserDal.vb" />
     <Compile Include="Dto\AddressDto.vb" />
@@ -120,6 +121,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -198,6 +200,12 @@
     <Compile Include="View\Login\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\BorrowBook\FrmChoseCreateReturn.Designer.vb">
+      <DependentUpon>FrmChoseCreateReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\BorrowBook\FrmChoseCreateReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Publisher\FrmCreateUpdatePublisher.Designer.vb">
       <DependentUpon>FrmCreateUpdatePublisher.vb</DependentUpon>
     </Compile>
@@ -272,6 +280,9 @@
     <EmbeddedResource Include="View\Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\BorrowBook\FrmChoseCreateReturn.resx">
+      <DependentUpon>FrmChoseCreateReturn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Publisher\FrmCreateUpdatePublisher.resx">
       <DependentUpon>FrmCreateUpdatePublisher.vb</DependentUpon>
     </EmbeddedResource>
@@ -301,7 +312,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\library-logo-design-template-45579f2f9eaf725821b915b523f191eb_screen.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

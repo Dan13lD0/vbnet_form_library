@@ -1,10 +1,10 @@
 ﻿Public Class BookDal
-    Public Function GetBooks(name As String, categoryId As Int64, authorId As Int64, publisherId As Int64, status As Boolean) As List(Of BookDto)
+    Public Function GetBooks(name As String, categoryId As Int64, authorId As Int64, publisherId As Int64, status As Boolean?) As List(Of BookDto)
         Using conn As New ContextSqlServer()
-            If status = Nothing Then
-                Return conn.Book.Where(Function(i) i.Name.Contains(name) & i.CategoryId = If(categoryId > 0, categoryId, i.CategoryId) & i.AuthorId = If(authorId > 0, authorId, i.AuthorId) & i.PublisherId = If(publisherId > 0, publisherId, i.PublisherId)).ToList()
+            If status.Equals(Nothing) Then
+                Return conn.Book.Where(Function(i) i.Name.Contains(name) And i.CategoryId.Equals(If(categoryId > 0, categoryId, i.CategoryId)) And i.AuthorId.Equals(If(authorId > 0, authorId, i.AuthorId)) And i.PublisherId.Equals(If(publisherId > 0, publisherId, i.PublisherId))).ToList()
             Else
-                Return conn.Book.Where(Function(i) i.Name.Contains(name) & i.CategoryId = If(categoryId > 0, categoryId, i.CategoryId) & i.AuthorId = If(authorId > 0, authorId, i.AuthorId) & i.PublisherId = If(publisherId > 0, publisherId, i.PublisherId) & i.Status = status).ToList()
+                Return conn.Book.Where(Function(i) i.Name.Contains(name) And i.CategoryId.Equals(If(categoryId > 0, categoryId, i.CategoryId)) And i.AuthorId.Equals(If(authorId > 0, authorId, i.AuthorId)) And i.PublisherId.Equals(If(publisherId > 0, publisherId, i.PublisherId)) And i.Status = status).ToList()
             End If
         End Using
     End Function
@@ -16,7 +16,7 @@
     End Function
 
     Public Function CreateBook(obj As BookDto) As BookDto
-        Dim insert As BookDto
+        Dim insert As New BookDto
 
         insert.Name = obj.Name
         insert.Description = obj.Description
@@ -53,7 +53,7 @@
         Using conn As New ContextSqlServer()
             Dim update = conn.Book.FirstOrDefault(Function(i) i.Id = obj.Id)
             If update IsNot Nothing Then
-                update.Status = If(obj.Status, False, True)
+                update.Status = If(update.Status, False, True)
                 conn.SaveChanges()
                 Return update
             End If

@@ -8,7 +8,7 @@
     End Function
 
     Public Function CreateContact(obj As ContactDto) As ContactDto
-        Dim insert As ContactDto
+        Dim insert As New ContactDto
 
         insert.Type = obj.Type
         insert.Contact = obj.Contact

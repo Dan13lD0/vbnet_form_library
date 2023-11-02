@@ -79,7 +79,7 @@ Partial Class FrmListAuthors
         Me.GroupBox1.Location = New System.Drawing.Point(78, 8)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(446, 65)
-        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filters:"
         '
@@ -90,7 +90,7 @@ Partial Class FrmListAuthors
         Me.Label3.Location = New System.Drawing.Point(321, 20)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(40, 13)
-        Me.Label3.TabIndex = 5
+        Me.Label3.TabIndex = 3
         Me.Label3.Text = "Status:"
         '
         'Label2
@@ -108,7 +108,7 @@ Partial Class FrmListAuthors
         Me.Label1.Location = New System.Drawing.Point(3, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 3
+        Me.Label1.TabIndex = 5
         Me.Label1.Text = "Code:"
         '
         'cboStatus
@@ -126,6 +126,7 @@ Partial Class FrmListAuthors
         Me.txtName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtName.Location = New System.Drawing.Point(112, 38)
+        Me.txtName.MaxLength = 300
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(203, 20)
         Me.txtName.TabIndex = 1
@@ -133,6 +134,7 @@ Partial Class FrmListAuthors
         'txtCode
         '
         Me.txtCode.Location = New System.Drawing.Point(6, 38)
+        Me.txtCode.MaxLength = 10
         Me.txtCode.Name = "txtCode"
         Me.txtCode.Size = New System.Drawing.Size(100, 20)
         Me.txtCode.TabIndex = 0
@@ -144,7 +146,7 @@ Partial Class FrmListAuthors
         Me.btnAdd.Location = New System.Drawing.Point(12, 12)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(60, 60)
-        Me.btnAdd.TabIndex = 1
+        Me.btnAdd.TabIndex = 0
         Me.btnAdd.Text = "New"
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -231,7 +233,7 @@ Partial Class FrmListAuthors
         Me.dgv.RowHeadersVisible = False
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(768, 325)
-        Me.dgv.TabIndex = 5
+        Me.dgv.TabIndex = 1
         '
         'bn
         '
@@ -248,7 +250,7 @@ Partial Class FrmListAuthors
         Me.bn.Name = "bn"
         Me.bn.PositionItem = Me.BindingNavigatorPositionItem
         Me.bn.Size = New System.Drawing.Size(772, 25)
-        Me.bn.TabIndex = 4
+        Me.bn.TabIndex = 0
         Me.bn.Text = "BindingNavigator1"
         '
         'BindingNavigatorCountItem
@@ -333,6 +335,7 @@ Partial Class FrmListAuthors
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.KeyPreview = True
         Me.Name = "FrmListAuthors"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Authors List"

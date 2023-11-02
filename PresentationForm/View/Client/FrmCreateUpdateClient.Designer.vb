@@ -29,10 +29,10 @@ Partial Class FrmCreateUpdateClient
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.mtbCpf = New System.Windows.Forms.MaskedTextBox()
+        Me.mtbRg = New System.Windows.Forms.MaskedTextBox()
+        Me.dtpBirth = New System.Windows.Forms.DateTimePicker()
+        Me.txtAge = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -44,22 +44,22 @@ Partial Class FrmCreateUpdateClient
         Me.btnClean = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtState = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtCity = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtComplement = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtStreet = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtZipCode = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtContact = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtPerson = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtType = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -68,6 +68,7 @@ Partial Class FrmCreateUpdateClient
         '
         'cboStatus
         '
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Location = New System.Drawing.Point(441, 24)
         Me.cboStatus.Name = "cboStatus"
@@ -78,8 +79,10 @@ Partial Class FrmCreateUpdateClient
         '
         Me.txtCode.Location = New System.Drawing.Point(12, 24)
         Me.txtCode.Name = "txtCode"
+        Me.txtCode.ReadOnly = True
         Me.txtCode.Size = New System.Drawing.Size(100, 20)
         Me.txtCode.TabIndex = 10
+        Me.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label2
         '
@@ -101,10 +104,10 @@ Partial Class FrmCreateUpdateClient
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox2)
-        Me.GroupBox1.Controls.Add(Me.MaskedTextBox1)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.mtbCpf)
+        Me.GroupBox1.Controls.Add(Me.mtbRg)
+        Me.GroupBox1.Controls.Add(Me.dtpBirth)
+        Me.GroupBox1.Controls.Add(Me.txtAge)
         Me.GroupBox1.Controls.Add(Me.txtName)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -117,37 +120,37 @@ Partial Class FrmCreateUpdateClient
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         '
-        'MaskedTextBox2
+        'mtbCpf
         '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(375, 85)
-        Me.MaskedTextBox2.Mask = "000.000.000-00"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(173, 20)
-        Me.MaskedTextBox2.TabIndex = 9
+        Me.mtbCpf.Location = New System.Drawing.Point(375, 85)
+        Me.mtbCpf.Mask = "000.000.000-00"
+        Me.mtbCpf.Name = "mtbCpf"
+        Me.mtbCpf.Size = New System.Drawing.Size(173, 20)
+        Me.mtbCpf.TabIndex = 9
         '
-        'MaskedTextBox1
+        'mtbRg
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(220, 85)
-        Me.MaskedTextBox1.Mask = "00.000.000-0"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.MaskedTextBox1.TabIndex = 8
-        Me.MaskedTextBox1.ValidatingType = GetType(Integer)
+        Me.mtbRg.Location = New System.Drawing.Point(220, 85)
+        Me.mtbRg.Mask = "00.000.000-0"
+        Me.mtbRg.Name = "mtbRg"
+        Me.mtbRg.Size = New System.Drawing.Size(149, 20)
+        Me.mtbRg.TabIndex = 8
+        Me.mtbRg.ValidatingType = GetType(Integer)
         '
-        'DateTimePicker1
+        'dtpBirth
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 82)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(143, 20)
-        Me.DateTimePicker1.TabIndex = 4
+        Me.dtpBirth.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpBirth.Location = New System.Drawing.Point(6, 82)
+        Me.dtpBirth.Name = "dtpBirth"
+        Me.dtpBirth.Size = New System.Drawing.Size(143, 20)
+        Me.dtpBirth.TabIndex = 4
         '
-        'TextBox1
+        'txtAge
         '
-        Me.TextBox1.Location = New System.Drawing.Point(155, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(59, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtAge.Location = New System.Drawing.Point(155, 82)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.Size = New System.Drawing.Size(59, 20)
+        Me.txtAge.TabIndex = 3
         '
         'txtName
         '
@@ -247,15 +250,15 @@ Partial Class FrmCreateUpdateClient
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.txtState)
         Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
+        Me.GroupBox2.Controls.Add(Me.txtCity)
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.txtComplement)
         Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtStreet)
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txtZipCode)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 174)
         Me.GroupBox2.Name = "GroupBox2"
@@ -264,12 +267,12 @@ Partial Class FrmCreateUpdateClient
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Address:"
         '
-        'TextBox6
+        'txtState
         '
-        Me.TextBox6.Location = New System.Drawing.Point(436, 134)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(112, 20)
-        Me.TextBox6.TabIndex = 3
+        Me.txtState.Location = New System.Drawing.Point(436, 134)
+        Me.txtState.Name = "txtState"
+        Me.txtState.Size = New System.Drawing.Size(112, 20)
+        Me.txtState.TabIndex = 3
         '
         'Label12
         '
@@ -280,12 +283,12 @@ Partial Class FrmCreateUpdateClient
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "State:"
         '
-        'TextBox5
+        'txtCity
         '
-        Me.TextBox5.Location = New System.Drawing.Point(277, 134)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox5.TabIndex = 3
+        Me.txtCity.Location = New System.Drawing.Point(277, 134)
+        Me.txtCity.Name = "txtCity"
+        Me.txtCity.Size = New System.Drawing.Size(153, 20)
+        Me.txtCity.TabIndex = 3
         '
         'Label11
         '
@@ -296,12 +299,12 @@ Partial Class FrmCreateUpdateClient
         Me.Label11.TabIndex = 1
         Me.Label11.Text = "City:"
         '
-        'TextBox4
+        'txtComplement
         '
-        Me.TextBox4.Location = New System.Drawing.Point(6, 134)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(261, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.txtComplement.Location = New System.Drawing.Point(6, 134)
+        Me.txtComplement.Name = "txtComplement"
+        Me.txtComplement.Size = New System.Drawing.Size(261, 20)
+        Me.txtComplement.TabIndex = 3
         '
         'Label10
         '
@@ -312,12 +315,12 @@ Partial Class FrmCreateUpdateClient
         Me.Label10.TabIndex = 1
         Me.Label10.Text = "Complement:"
         '
-        'TextBox3
+        'txtStreet
         '
-        Me.TextBox3.Location = New System.Drawing.Point(6, 88)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(542, 20)
-        Me.TextBox3.TabIndex = 3
+        Me.txtStreet.Location = New System.Drawing.Point(6, 88)
+        Me.txtStreet.Name = "txtStreet"
+        Me.txtStreet.Size = New System.Drawing.Size(542, 20)
+        Me.txtStreet.TabIndex = 3
         '
         'Label9
         '
@@ -328,12 +331,12 @@ Partial Class FrmCreateUpdateClient
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Street:"
         '
-        'TextBox2
+        'txtZipCode
         '
-        Me.TextBox2.Location = New System.Drawing.Point(9, 42)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.txtZipCode.Location = New System.Drawing.Point(9, 42)
+        Me.txtZipCode.Name = "txtZipCode"
+        Me.txtZipCode.Size = New System.Drawing.Size(140, 20)
+        Me.txtZipCode.TabIndex = 3
         '
         'Label8
         '
@@ -346,11 +349,11 @@ Partial Class FrmCreateUpdateClient
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.TextBox7)
+        Me.GroupBox3.Controls.Add(Me.txtContact)
         Me.GroupBox3.Controls.Add(Me.Label13)
-        Me.GroupBox3.Controls.Add(Me.TextBox8)
+        Me.GroupBox3.Controls.Add(Me.txtPerson)
         Me.GroupBox3.Controls.Add(Me.Label14)
-        Me.GroupBox3.Controls.Add(Me.TextBox11)
+        Me.GroupBox3.Controls.Add(Me.txtType)
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Location = New System.Drawing.Point(12, 349)
         Me.GroupBox3.Name = "GroupBox3"
@@ -359,12 +362,12 @@ Partial Class FrmCreateUpdateClient
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Contact:"
         '
-        'TextBox7
+        'txtContact
         '
-        Me.TextBox7.Location = New System.Drawing.Point(118, 42)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(215, 20)
-        Me.TextBox7.TabIndex = 3
+        Me.txtContact.Location = New System.Drawing.Point(118, 42)
+        Me.txtContact.Name = "txtContact"
+        Me.txtContact.Size = New System.Drawing.Size(215, 20)
+        Me.txtContact.TabIndex = 3
         '
         'Label13
         '
@@ -375,12 +378,12 @@ Partial Class FrmCreateUpdateClient
         Me.Label13.TabIndex = 1
         Me.Label13.Text = "Contact:"
         '
-        'TextBox8
+        'txtPerson
         '
-        Me.TextBox8.Location = New System.Drawing.Point(339, 42)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(209, 20)
-        Me.TextBox8.TabIndex = 3
+        Me.txtPerson.Location = New System.Drawing.Point(339, 42)
+        Me.txtPerson.Name = "txtPerson"
+        Me.txtPerson.Size = New System.Drawing.Size(209, 20)
+        Me.txtPerson.TabIndex = 3
         '
         'Label14
         '
@@ -391,12 +394,12 @@ Partial Class FrmCreateUpdateClient
         Me.Label14.TabIndex = 1
         Me.Label14.Text = "For:"
         '
-        'TextBox11
+        'txtType
         '
-        Me.TextBox11.Location = New System.Drawing.Point(9, 42)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(103, 20)
-        Me.TextBox11.TabIndex = 3
+        Me.txtType.Location = New System.Drawing.Point(9, 42)
+        Me.txtType.Name = "txtType"
+        Me.txtType.Size = New System.Drawing.Size(103, 20)
+        Me.txtType.TabIndex = 3
         '
         'Label17
         '
@@ -449,30 +452,30 @@ Partial Class FrmCreateUpdateClient
     Friend WithEvents btnClose As Button
     Friend WithEvents btnClean As Button
     Friend WithEvents btnSave As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents dtpBirth As DateTimePicker
+    Friend WithEvents txtAge As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents mtbCpf As MaskedTextBox
+    Friend WithEvents mtbRg As MaskedTextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtState As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtCity As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtComplement As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtStreet As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtZipCode As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtContact As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtPerson As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txtType As TextBox
     Friend WithEvents Label17 As Label
 End Class

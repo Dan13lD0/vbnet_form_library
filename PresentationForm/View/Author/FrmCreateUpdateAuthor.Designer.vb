@@ -25,12 +25,12 @@ Partial Class FrmCreateUpdateAuthor
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCreateUpdateAuthor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCode = New System.Windows.Forms.TextBox()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
         Me.ImageListCreateUpdate = New System.Windows.Forms.ImageList(Me.components)
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClean = New System.Windows.Forms.Button()
@@ -48,38 +48,13 @@ Partial Class FrmCreateUpdateAuthor
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'txtName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Code:"
-        '
-        'txtCode
-        '
-        Me.txtCode.Location = New System.Drawing.Point(12, 25)
-        Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(100, 20)
-        Me.txtCode.TabIndex = 2
-        '
-        'cboStatus
-        '
-        Me.cboStatus.FormattingEnabled = True
-        Me.cboStatus.Location = New System.Drawing.Point(270, 25)
-        Me.cboStatus.Name = "cboStatus"
-        Me.cboStatus.Size = New System.Drawing.Size(121, 21)
-        Me.cboStatus.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(267, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Status:"
+        Me.txtName.Location = New System.Drawing.Point(6, 33)
+        Me.txtName.MaxLength = 300
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(367, 20)
+        Me.txtName.TabIndex = 0
         '
         'Label3
         '
@@ -90,12 +65,40 @@ Partial Class FrmCreateUpdateAuthor
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Name:"
         '
-        'txtName
+        'Label1
         '
-        Me.txtName.Location = New System.Drawing.Point(6, 33)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(367, 20)
-        Me.txtName.TabIndex = 2
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(9, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Code:"
+        '
+        'txtCode
+        '
+        Me.txtCode.Location = New System.Drawing.Point(12, 25)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.ReadOnly = True
+        Me.txtCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtCode.TabIndex = 5
+        '
+        'cboStatus
+        '
+        Me.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Location = New System.Drawing.Point(270, 25)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(121, 21)
+        Me.cboStatus.TabIndex = 7
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(267, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Status:"
         '
         'ImageListCreateUpdate
         '
@@ -112,7 +115,7 @@ Partial Class FrmCreateUpdateAuthor
         Me.btnSave.Location = New System.Drawing.Point(199, 125)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(60, 60)
-        Me.btnSave.TabIndex = 4
+        Me.btnSave.TabIndex = 1
         Me.btnSave.Text = "Save"
         Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnSave.UseVisualStyleBackColor = True
@@ -124,7 +127,7 @@ Partial Class FrmCreateUpdateAuthor
         Me.btnClean.Location = New System.Drawing.Point(265, 125)
         Me.btnClean.Name = "btnClean"
         Me.btnClean.Size = New System.Drawing.Size(60, 60)
-        Me.btnClean.TabIndex = 5
+        Me.btnClean.TabIndex = 2
         Me.btnClean.Text = "Clean"
         Me.btnClean.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnClean.UseVisualStyleBackColor = True
@@ -136,7 +139,7 @@ Partial Class FrmCreateUpdateAuthor
         Me.btnClose.Location = New System.Drawing.Point(331, 125)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(60, 60)
-        Me.btnClose.TabIndex = 6
+        Me.btnClose.TabIndex = 3
         Me.btnClose.Text = "Close"
         Me.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnClose.UseVisualStyleBackColor = True

@@ -30,7 +30,7 @@
 
         Try
             action = True
-            msg = "Author create with successful"
+            msg = If(String.IsNullOrEmpty(code), "Author create with successful", "Author updated with successful")
 
             Dim obj As New AuthorDto()
             Int64.TryParse(code, obj.Id)

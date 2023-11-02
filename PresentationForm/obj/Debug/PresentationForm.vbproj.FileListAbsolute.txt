@@ -32,3 +32,4 @@ C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\bin\Debug\En
 C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.FrmCreateUpdateClient.resources
 C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.vbproj.CopyComplete
+C:\Users\padmin\Desktop\Backups\vbnet_form_library\PresentationForm\obj\Debug\PresentationForm.FrmChoseCreateReturn.resources

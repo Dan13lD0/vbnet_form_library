@@ -29,20 +29,20 @@ Partial Class FrmCreateUpdateBook
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rtbDescription = New System.Windows.Forms.RichTextBox()
+        Me.cboPublisher = New System.Windows.Forms.ComboBox()
+        Me.cboAuthor = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cboCategory = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ImageListCreateUpdate = New System.Windows.Forms.ImageList(Me.components)
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnClean = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboCategory = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cboAuthor = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cboPublisher = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -81,7 +81,7 @@ Partial Class FrmCreateUpdateBook
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.rtbDescription)
         Me.GroupBox1.Controls.Add(Me.cboPublisher)
         Me.GroupBox1.Controls.Add(Me.cboAuthor)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -97,12 +97,86 @@ Partial Class FrmCreateUpdateBook
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         '
+        'rtbDescription
+        '
+        Me.rtbDescription.Location = New System.Drawing.Point(6, 219)
+        Me.rtbDescription.Name = "rtbDescription"
+        Me.rtbDescription.Size = New System.Drawing.Size(367, 80)
+        Me.rtbDescription.TabIndex = 12
+        Me.rtbDescription.Text = ""
+        '
+        'cboPublisher
+        '
+        Me.cboPublisher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboPublisher.FormattingEnabled = True
+        Me.cboPublisher.Items.AddRange(New Object() {"Select"})
+        Me.cboPublisher.Location = New System.Drawing.Point(6, 174)
+        Me.cboPublisher.Name = "cboPublisher"
+        Me.cboPublisher.Size = New System.Drawing.Size(367, 21)
+        Me.cboPublisher.TabIndex = 11
+        '
+        'cboAuthor
+        '
+        Me.cboAuthor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboAuthor.FormattingEnabled = True
+        Me.cboAuthor.Items.AddRange(New Object() {"Select"})
+        Me.cboAuthor.Location = New System.Drawing.Point(6, 128)
+        Me.cboAuthor.Name = "cboAuthor"
+        Me.cboAuthor.Size = New System.Drawing.Size(367, 21)
+        Me.cboAuthor.TabIndex = 11
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 203)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "Description:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(3, 158)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(53, 13)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Publisher:"
+        '
+        'cboCategory
+        '
+        Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCategory.FormattingEnabled = True
+        Me.cboCategory.Items.AddRange(New Object() {"Select"})
+        Me.cboCategory.Location = New System.Drawing.Point(6, 81)
+        Me.cboCategory.Name = "cboCategory"
+        Me.cboCategory.Size = New System.Drawing.Size(367, 21)
+        Me.cboCategory.TabIndex = 11
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 112)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 13)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Author:"
+        '
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(6, 33)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(367, 20)
         Me.txtName.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 65)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(52, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Category:"
         '
         'Label3
         '
@@ -157,74 +231,6 @@ Partial Class FrmCreateUpdateBook
         Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnSave.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 65)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Category:"
-        '
-        'cboCategory
-        '
-        Me.cboCategory.FormattingEnabled = True
-        Me.cboCategory.Location = New System.Drawing.Point(6, 81)
-        Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(367, 21)
-        Me.cboCategory.TabIndex = 11
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(3, 112)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(41, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Author:"
-        '
-        'cboAuthor
-        '
-        Me.cboAuthor.FormattingEnabled = True
-        Me.cboAuthor.Location = New System.Drawing.Point(6, 128)
-        Me.cboAuthor.Name = "cboAuthor"
-        Me.cboAuthor.Size = New System.Drawing.Size(367, 21)
-        Me.cboAuthor.TabIndex = 11
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(3, 158)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(53, 13)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Publisher:"
-        '
-        'cboPublisher
-        '
-        Me.cboPublisher.FormattingEnabled = True
-        Me.cboPublisher.Location = New System.Drawing.Point(6, 174)
-        Me.cboPublisher.Name = "cboPublisher"
-        Me.cboPublisher.Size = New System.Drawing.Size(367, 21)
-        Me.cboPublisher.TabIndex = 11
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 203)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
-        Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Description:"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(6, 219)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(367, 80)
-        Me.RichTextBox1.TabIndex = 12
-        Me.RichTextBox1.Text = ""
-        '
         'FrmCreateUpdateBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -261,7 +267,7 @@ Partial Class FrmCreateUpdateBook
     Friend WithEvents btnClose As Button
     Friend WithEvents btnClean As Button
     Friend WithEvents btnSave As Button
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents rtbDescription As RichTextBox
     Friend WithEvents cboPublisher As ComboBox
     Friend WithEvents cboAuthor As ComboBox
     Friend WithEvents Label7 As Label

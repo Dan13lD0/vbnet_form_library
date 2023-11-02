@@ -54,4 +54,8 @@
         MessageBox.Show(msg, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
         ValidateCreateUpdate()
     End Sub
+
+    Private Sub txtName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtName.KeyPress
+        _utils.OnlyLettersAndNumbers(e.KeyChar)
+    End Sub
 End Class

@@ -4,9 +4,10 @@
         Dim id As Int64 = 0
         Int64.TryParse(code, id)
 
-        Dim vStatus As Boolean
 
-        If String.IsNullOrEmpty(status) Then
+        Dim vStatus As Boolean?
+
+        If status.Equals("All") Then
             vStatus = Nothing
         Else
             If status.ToUpper().Trim().Equals("ACTIVE") Then
@@ -15,7 +16,8 @@
                 vStatus = False
             End If
         End If
-
+        rg = rg.Replace(".", "").Replace("-", "").Replace(",", "").Trim()
+        cpf = cpf.Replace(".", "").Replace("-", "").Replace(",", "").Trim()
         Return _dal.GetClients(id, name, rg, cpf, vStatus)
     End Function
 
@@ -26,11 +28,11 @@
         Return _dal.GetClient(id)
     End Function
 
-    Public Function CreateUpdateClient(code As String, name As String, birthday As String, rg As String, cpf As String, status As String, ByRef msg As String, ByRef action As Boolean) As ClientDto
+    Public Function CreateUpdateClient(code As String, name As String, birthday As String, rg As String, cpf As String, contactId As String, addressId As String, status As String, ByRef msg As String, ByRef action As Boolean) As ClientDto
 
         Try
             action = True
-            msg = "Client create with successful"
+            msg = If(String.IsNullOrEmpty(code), "Client create with successful", "Client updated with successful")
 
             Dim obj As New ClientDto()
             Int64.TryParse(code, obj.Id)
@@ -79,6 +81,22 @@
                 action = False
                 msg = "This record already exists!"
                 Return Nothing
+            End If
+
+            If String.IsNullOrEmpty(addressId) Then
+                action = False
+                msg = "The addressId cpf is requerid!"
+                Return Nothing
+            Else
+                Int64.TryParse(addressId, obj.AddressId)
+            End If
+
+            If String.IsNullOrEmpty(contactId) Then
+                action = False
+                msg = "The contactId cpf is requerid!"
+                Return Nothing
+            Else
+                Int64.TryParse(contactId, obj.ContactId)
             End If
 
             If obj.Id = 0 Then

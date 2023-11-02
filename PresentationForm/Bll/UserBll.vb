@@ -1,5 +1,11 @@
-﻿Public Class UserBll
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+
+Public Class UserBll
     Private _dal As New UserDal()
+    Private _validate As New LoginDal()
+    Public Function ValidateUser(login As String, password As String) As Boolean
+        Return _validate.ValidateUser(login, password)
+    End Function
     Public Function GetUsers(code As String, name As String, login As String, email As String, status As String) As List(Of UserDto)
         Dim id As Int64 = 0
         Int64.TryParse(code, id)
@@ -108,4 +114,18 @@
         End Try
     End Function
 
+    Public Function InitializeUsers()
+        Dim data = _dal.GetUsers("0", "", "", "", Nothing)
+        If data.Count() = 0 Then
+            Dim admin As New UserDto()
+            admin.Name = "Administrador"
+            admin.Login = "admin"
+            admin.Password = "admin"
+            admin.Email = "admin@gmail.com"
+            admin.Status = True
+
+            _dal.CreateUser(admin)
+        End If
+
+    End Function
 End Class

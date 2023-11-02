@@ -7,13 +7,13 @@
     End Function
 
     Public Function CreateAddress(obj As AddressDto) As AddressDto
-        Dim insert As AddressDto
+        Dim insert As New AddressDto
         insert.ZipCode = obj.ZipCode
         insert.Street = obj.Street
         insert.Complement = obj.Complement
         insert.City = obj.City
         insert.Street = obj.Street
-
+        insert.State = obj.State
         Using conn As New ContextSqlServer()
             conn.Address.Add(insert)
             conn.SaveChanges()
@@ -30,6 +30,7 @@
                 update.Complement = obj.Complement
                 update.City = obj.City
                 update.Street = obj.Street
+                update.State = obj.State
                 conn.SaveChanges()
                 Return update
             End If

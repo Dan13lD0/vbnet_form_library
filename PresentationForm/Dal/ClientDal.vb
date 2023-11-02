@@ -1,10 +1,10 @@
 ﻿Public Class ClientDal
-    Public Function GetClients(code As Int64?, name As String, rg As String, cpf As String, status As Boolean) As List(Of ClientDto)
+    Public Function GetClients(code As Int64, name As String, rg As String, cpf As String, status As Boolean?) As List(Of ClientDto)
         Using conn As New ContextSqlServer()
-            If status = Nothing Then
-                Return conn.Client.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name) & i.RG.Contains(rg) & i.CPF.Contains(cpf)).ToList()
+            If status.Equals(Nothing) Then
+                Return conn.Client.Where(Function(i) i.Id.Equals(If(code > 0, code, i.Id)) And i.Name.Contains(name) & i.RG.Contains(rg) And i.CPF.Contains(cpf)).ToList()
             Else
-                Return conn.Client.Where(Function(i) i.Id = If(code > 0, code, i.Id) & i.Name.Contains(name) & i.RG.Contains(rg) & i.CPF.Contains(cpf) & i.Status = status).ToList()
+                Return conn.Client.Where(Function(i) i.Id.Equals(If(code > 0, code, i.Id)) And i.Name.Contains(name) & i.RG.Contains(rg) And i.CPF.Contains(cpf) And i.Status = status).ToList()
             End If
         End Using
     End Function
@@ -16,7 +16,7 @@
     End Function
 
     Public Function CreateClient(obj As ClientDto) As ClientDto
-        Dim insert As ClientDto
+        Dim insert As New ClientDto
 
         insert.Name = obj.Name
         insert.BirthDay = obj.BirthDay
@@ -36,7 +36,7 @@
 
     Public Function UpdateClient(obj As ClientDto) As ClientDto
         Using conn As New ContextSqlServer()
-            Dim update = conn.Client.FirstOrDefault(Function(i) i.Id = obj.Id)
+            Dim update = conn.Client.FirstOrDefault(Function(i) i.Id.Equals(obj.Id))
             If update IsNot Nothing Then
                 update.Name = obj.Name
                 update.BirthDay = obj.BirthDay
@@ -57,7 +57,7 @@
         Using conn As New ContextSqlServer()
             Dim update = conn.Client.FirstOrDefault(Function(i) i.Id = obj.Id)
             If update IsNot Nothing Then
-                update.Status = If(obj.Status, False, True)
+                update.Status = If(update.Status, False, True)
                 conn.SaveChanges()
                 Return update
             End If

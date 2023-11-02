@@ -2,6 +2,9 @@
 
 Public Class BookBll
     Private _dal As New BookDal()
+    Private _bllAutor As New AuthorBll()
+    Private _bllCategory As New CategoryBll()
+    Private _bllPublisher As New PublisherBll()
     Public Function GetBooks(code As String, name As String, categoryId As String, authorId As String, publishId As String, status As String) As List(Of BookDto)
         Dim id As Int64 = 0
         Int64.TryParse(code, id)
@@ -15,9 +18,9 @@ Public Class BookBll
         Dim publisher As Int64 = publishId
         Int64.TryParse(publishId, publisher)
 
-        Dim vStatus As Boolean
+        Dim vStatus As Boolean?
 
-        If String.IsNullOrEmpty(status) Then
+        If status.Equals("All") Then
             vStatus = Nothing
         Else
             If status.ToUpper().Trim().Equals("ACTIVE") Then
@@ -27,7 +30,14 @@ Public Class BookBll
             End If
         End If
 
-        Return _dal.GetBooks(name, category, author, publisher, vStatus)
+        Dim data = _dal.GetBooks(name, category, author, publisher, vStatus)
+
+        For Each row In data
+            row.CategoryName = _bllCategory.GetCategory(row.CategoryId.ToString()).Name
+            row.AuthorName = _bllAutor.GetAuthor(row.AuthorId.ToString()).Name
+            row.PublisherName = _bllPublisher.GetPublisher(row.PublisherId.ToString()).Name
+        Next
+        Return data
     End Function
 
     Public Function GetBook(code As String) As BookDto
@@ -41,7 +51,7 @@ Public Class BookBll
 
         Try
             action = True
-            msg = "Book create with successful"
+            msg = If(String.IsNullOrEmpty(code), "Book create with successful", "Book updated with successful")
 
             Dim obj As New BookDto()
             Int64.TryParse(code, obj.Id)

@@ -95,4 +95,12 @@
         End If
 
     End Sub
+
+    Private Sub FrmListAuthors_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+
+    End Sub
+
+    Private Sub FrmListAuthors_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        _utils.TabFunction(e)
+    End Sub
 End Class

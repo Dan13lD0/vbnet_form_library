@@ -16,7 +16,10 @@ Public Class BookDto
     Private _publisherId As Int64
     Private _publisher As PublisherDto
     Private _status As Boolean
-    Private _statusDescription As String
+    Private _authorName As String
+    Private _categoryName As String
+    Private _publisherName As String
+    Private _borrow As String
 
     <Key>
     <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
@@ -109,11 +112,48 @@ Public Class BookDto
     <NotMapped>
     Public ReadOnly Property StatusDescription() As String
         Get
-            If _statusDescription Then
+            If _status Then
                 Return "Active"
             Else
                 Return "Inactive"
             End If
         End Get
+    End Property
+    <NotMapped>
+    Public Property CategoryName As String
+        Get
+            Return _categoryName
+        End Get
+        Set(value As String)
+            _categoryName = value
+        End Set
+    End Property
+    <NotMapped>
+    Public Property AuthorName As String
+        Get
+            Return _authorName
+        End Get
+        Set(value As String)
+            _authorName = value
+        End Set
+    End Property
+
+    <NotMapped>
+    Public Property PublisherName As String
+        Get
+            Return _publisherName
+        End Get
+        Set(value As String)
+            _publisherName = value
+        End Set
+    End Property
+    <NotMapped>
+    Public Property Borrow As String
+        Get
+            Return _borrow
+        End Get
+        Set(value As String)
+            _borrow = value
+        End Set
     End Property
 End Class

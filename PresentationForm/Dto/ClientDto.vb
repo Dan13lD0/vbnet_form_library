@@ -123,7 +123,7 @@ Public Class ClientDto
     <NotMapped>
     Public ReadOnly Property StatusDescription() As String
         Get
-            If _statusDescription Then
+            If _status Then
                 Return "Active"
             Else
                 Return "Inactive"

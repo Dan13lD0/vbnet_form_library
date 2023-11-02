@@ -8,6 +8,8 @@ Public Class ContextSqlServer
         MyBase.New(My.Settings.ConnectionString)
     End Sub
 
+
+
     Private _user As DbSet(Of UserDto)
     Private _category As DbSet(Of CategoryDto)
     Private _publisher As DbSet(Of PublisherDto)

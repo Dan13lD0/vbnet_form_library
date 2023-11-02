@@ -22,4 +22,9 @@
         End If
         Return False
     End Function
+    Public Function TabFunction(e As KeyEventArgs)
+        If e.KeyCode = Keys.Enter Then
+            SendKeys.Send("{Tab}")
+        End If
+    End Function
 End Class
